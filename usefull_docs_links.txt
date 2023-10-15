@@ -1,0 +1,5 @@
+https://www.programiz.com/dsa/merge-sort
+https://www.sohamkamani.com/golang/enums/ 
+https://www.golangprograms.com/data-structure-and-algorithms.html
+https://golangbyexample.com/all-data-structures-golang/
+https://medium.com/@victorsteven/understanding-data-structures-in-golang-f55205afdcaa
