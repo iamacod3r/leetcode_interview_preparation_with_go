@@ -1,5 +1,6 @@
 package medium
 
+// https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree-iii/description/
 type LowestCommonAncestorOfaBinaryTreeIII struct {
 }
 
@@ -10,16 +11,42 @@ type Node struct {
 	Parent *Node
 }
 
+// h1 is height of p
+// h2 is height of q
+// Time complexity is O(h1+h2)
+// Space complexity is O(1)
 func (l *LowestCommonAncestorOfaBinaryTreeIII) lowestCommonAncestor(p *Node, q *Node) *Node {
-	return &Node{}
+	a, b := p, q
+	for a != b {
+		a = a.Parent
+		b = b.Parent
+		if a == nil {
+			a = q
+		}
+
+		if b == nil {
+			b = p
+		}
+	}
+
+	return b
 }
 
 func (l *LowestCommonAncestorOfaBinaryTreeIII) Test() {
 
-	lr := &Node{Val: 2, Left: &Node{Val: 7}, Right: &Node{Val: 4}}
-	left := &Node{Val: 5, Left: &Node{Val: 6}, Right: lr}
-	right := &Node{Val: 1, Left: &Node{Val: 0}, Right: &Node{Val: 8}}
-	root := &Node{Val: 3, Left: left, Right: right}
-	l.lowestCommonAncestor(root, left)
+	root := &Node{Val: 3}
+	left := &Node{Parent: root, Val: 5}
+	left.Left = &Node{Val: 6, Parent: left}
+	left.Right = &Node{Parent: left, Val: 2}
+	left.Right.Left = &Node{Parent: left.Right, Val: 7}
+	left.Right.Right = &Node{Parent: left.Right, Val: 4}
 
+	right := &Node{Parent: root, Val: 1}
+	right.Left = &Node{Parent: right, Val: 0}
+	right.Right = &Node{Parent: right, Val: 8}
+
+	root.Left = left
+	root.Right = right
+	rs := l.lowestCommonAncestor(left, right)
+	println(rs.Val)
 }
