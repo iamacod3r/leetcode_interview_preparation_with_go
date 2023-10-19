@@ -8,7 +8,7 @@ import (
 func main() {
 	fmt.Println("Interview Go\n")
 
-	var s medium.LowestCommonAncestorOfaBinaryTreeIII
+	var s medium.LowestCommonAncestorOfaBinaryTree236
 	s.Test()
 }
 

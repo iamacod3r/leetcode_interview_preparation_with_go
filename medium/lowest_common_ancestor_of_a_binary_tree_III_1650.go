@@ -1,5 +1,7 @@
 package medium
 
+import "interview_go/common"
+
 // https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree-iii/description/
 type LowestCommonAncestorOfaBinaryTreeIII struct {
 }
@@ -10,6 +12,8 @@ type Node struct {
 	Right  *Node
 	Parent *Node
 }
+
+// https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree-iii/solutions/950242/Multiple-solution-approaches-in-Java-(with-comments-and-explanation)/
 
 // h1 is height of p
 // h2 is height of q
@@ -47,6 +51,11 @@ func (l *LowestCommonAncestorOfaBinaryTreeIII) Test() {
 
 	root.Left = left
 	root.Right = right
-	rs := l.lowestCommonAncestor(left, right)
-	println(rs.Val)
+	rs := l.lowestCommonAncestor(left.Right.Right, right.Left)
+	e := 3
+	if rs != nil {
+		common.PrintInt(rs.Val, e)
+	} else {
+		println("result is nil")
+	}
 }
