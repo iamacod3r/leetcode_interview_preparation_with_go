@@ -2,13 +2,15 @@ package main
 
 import (
 	"fmt"
-	"interview_go/medium"
+	"interview_go/easy"
 )
 
 func main() {
 	fmt.Println("Interview Go\n")
 
-	var s medium.LowestCommonAncestorOfaBinaryTree236
+	// TODO :
+	// var s medium.LowestCommonAncestorOfaBinaryTreeII_1644
+	var s easy.AddStrings415
 	s.Test()
 }
 
