@@ -65,4 +65,10 @@ func (t *BasicCalculatorII_227) Test() {
 	e2 := 1
 	r2 := t.calculate(s2)
 	common.PrintInt(r2, e2)
+
+	// case 3
+	s3 := " 3+5 / 2 "
+	e3 := 5
+	r3 := t.calculate(s3)
+	common.PrintInt(r3, e3)
 }
