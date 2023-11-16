@@ -13,7 +13,7 @@ func TrySomething() {
 	// interface{} is better for SET/HashSet usage
 	hashSet := make(map[string]interface{}, 1)
 
-	myValue, ok := hashSet["cihan"].(int)
+	myValue, ok := hashSet["iamcod3r"].(int)
 	if !ok {
 		fmt.Println("not found")
 		// return
