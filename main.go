@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"interview_go/easy"
+	"interview_go/medium"
 )
 
 func main() {
@@ -10,7 +10,7 @@ func main() {
 
 	// TODO :
 	// var s medium.LowestCommonAncestorOfaBinaryTreeII_1644
-	var s easy.PlusOne_66
+	var s medium.BasicCalculatorII_227
 	s.Test()
 }
 
